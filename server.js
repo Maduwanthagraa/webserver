@@ -16,7 +16,7 @@ const pool = mysql.createPool({
   port: 3306
 });
 
-console.log('Connecting to the database...');
+console.log('Connecting to the Energy Meter database...');
 
 pool.getConnection((err, connection) => {
   if (err) {
@@ -30,7 +30,7 @@ pool.getConnection((err, connection) => {
 
 function setupServer() {
   app.get('/', (req, res) => {
-    res.send('Welcome to your API');
+    res.send('Welcome to energy meter server');
   });
 
   app.post('/data', (req, res) => {
