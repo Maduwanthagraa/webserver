@@ -44,8 +44,10 @@ function setupServer() {
       if (err) {
         console.error('Error inserting data:', err);
         console.log("Error occured")
+        return res.json(500);
       }else{
         console.log("Data inserted succefully");
+        res.json(200);
       }
     });
   });
