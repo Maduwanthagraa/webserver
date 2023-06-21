@@ -52,6 +52,10 @@ function setupServer() {
     });
   });
 
+  app.post('/getDate', (req,res) => {
+    return res.json("Function call");
+  })
+
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
   });
