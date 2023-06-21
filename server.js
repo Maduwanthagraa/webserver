@@ -3,7 +3,7 @@ const mysql = require('mysql');
 
 // Create an Express application
 const app = express();
-const port = process.env.PORT || 3000; // Use the PORT environment variable or default to 3000
+const port = process.env.PORT || 80; // Use the PORT environment variable or default to 3000
 
 // Set up middleware to parse request body
 app.use(express.json());
