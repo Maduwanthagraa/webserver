@@ -34,6 +34,7 @@ pool.getConnection((err, connection) => {
 
   app.post('/data', (req, res) => {
     const { device_id, billdate, energyvalue } = req.body; // Assuming you have three fields in your data
+    console.log(req.body);
 
     const insertQuery = 'INSERT INTO energydata (device_id, billdate, energyvalue) VALUES (?, ?, ?)';
     const values = [device_id, billdate, energyvalue];
